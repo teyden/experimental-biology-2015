@@ -18,7 +18,7 @@ ___
 <li>large number of interactions</li>
 <li>dynamic processes</li>
 	>> variant between individuals
-	>> variant throughout individual's lifetime
+	<br>>> variant throughout individual's lifetime
 </ul></ul>
 
 However, rapid growth in research data — need to resolve limitations in human ability to read, curate, and make meaningful connections out of large data sets. 
@@ -79,7 +79,6 @@ QUERY SEARCH: Use parameters, biological objects, and combinations of biological
 <li>Allows us to publish data</li>
 <li>Provides opportunity for usage of data</li>
 </ul>
-
 >> 4. Produce and perform functions on data
 
 <ul><li>Visualization --> GUI</li>
