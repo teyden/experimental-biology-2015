@@ -41,12 +41,10 @@ Thus, similarly to the wet-lab, if we assign the mundane curation processes to a
 
 >> * Build text mining system tailored towards biological text mining
 
-<ul><li>All steps to-date (not listing it here) and including a portion not yet discussed yet is critical to a complete system:</li>
+<ul><li>All steps to-date (not listing it here) and including a portion not yet discussed but is critical to a complete system:</li>
 <ul><li> >> Implement Named Entity Recognition and Classification (NERC) techniques and integrate with information retrieval system (i.e. rule-based approach requires that all biological entities can be quantitatively measured...)</li>
 <li> >> Use domain knowledge from biomedical ontologies with machine learning approaches using HMM, or other models appropriate for recognizing biological objects (protein, cell-type, cell-line, etc.)</li></ul>
 </ul>
-
->> * Input relations to relational database 
 
 >> * Apply graphing functions to map linkage between relational text (visualization)
 
@@ -74,20 +72,20 @@ QUERY SEARCH: Use parameters, biological objects, and combinations of biological
 
 ####3. Materials & Methods
 <ol>
-<li>Construct NLP system to gather information from unstructured text</li>
-<li>Extract knowledge from retrieved information; abstract relational data</li>
-<li>Relational database</li>
+
+>> 1. Construct NLP system to gather information from unstructured text
+>> 2. Extract knowledge from retrieved information; abstract relational data
+>> 3. Relational database
 <ol> 
 <li>Allows us to publish data</li>
 <li>Provides opportunity for usage of data</li>
 </ol>
-<li>Produce and perform functions on data</li>
+>> 4. Produce and perform functions on data
 <ul><li>Visualization --> GUI</li>
 <ul><li> > Allow people to see what is being done</li></ul>
 <li>Web application --> UX</li>
-<ul><li> > Allow (some) interaction with what they can see what we’ve done</li></ul>
-</ul>
-</ol>
+<ul><li> > Allow (some) interaction with what they can see what we’ve done</li></ul></ul>
+
 
 ####4. Discussion
 * Tie together everything we’ve done
