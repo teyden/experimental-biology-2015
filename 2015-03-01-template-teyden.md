@@ -41,13 +41,15 @@ Thus, similarly to the wet-lab, if we assign the mundane curation processes to a
 At CREA, they are approaching modelling the concept of aging from a systems biology standpoint, looking at interactions between biological components in the body to give rise to function and behaviour of that system.
 
 Hence, as **BIOLOGICAL AGING is a subject of growth**, which is a **function of time (i.e. X(t) …)**, as well as a **function of several additional parameters**… 
-⋅⋅* Set additional parameters to our growth function to be measures of quantifiable biological objects, e.g. cell volume, membrane thickness, telomere length, amount of oxygen radicals, amount of accumulation of somatic mutations, concentration of p450, etc. 
+<li>Set additional parameters to our growth function to be measures of quantifiable biological objects, e.g. cell volume, membrane thickness, telomere length, amount of oxygen radicals, amount of accumulation of somatic mutations, concentration of p450, etc.</li>
 
 QUERY SEARCH: Use parameters, biological objects, and combinations of biological objects paired with common verbs describing biological events as search queries for PubMed; extract all relations from abstracts containing search query. Sample sets of query searches:
 
-... parameters = [“cell volume”, “membrane thickness”, “telomere length”, “concentration of X”, “density of Y"]
-⋅⋅2. biol_objects = [“p450”, “astrocyte”, “dopamine”, “hypothalamus”, “glucose”, “insulin”, “somatostatin”]
-⋅⋅3. objectsNverbs = [[“p450”, “increase”], [“p450”, “decrease”], [“dopamine”, “activate”], [“insulin”, “inhibit”], [“somatostatin”, “excite”]]
+<ol>
+<li>parameters = [“cell volume”, “membrane thickness”, “telomere length”, “concentration of X”, “density of Y"]</li>
+<li>biol_objects = [“p450”, “astrocyte”, “dopamine”, “hypothalamus”, “glucose”, “insulin”, “somatostatin”]</li>
+<li>objectsNverbs = [[“p450”, “increase”], [“p450”, “decrease”], [“dopamine”, “activate”], [“insulin”, “inhibit”], [“somatostatin”, “excite”]]</li>
+</ol>
 
 >> * Input relations to relational database 
 >> * Apply graphing functions to map linkage between relational text (visualization)
@@ -56,15 +58,20 @@ QUERY SEARCH: Use parameters, biological objects, and combinations of biological
 
 
 ####3. Materials & Methods
-1. Construct NLP system to gather information from unstructured text
-2. Extract knowledge from retrieved information; abstract relational data
-3. Relational database
-..1. Allows us to publish data
-..2. Provides opportunity for usage of data 
-4. Produce and perform functions on data
-... Visualization —> GUI --> Allow people to see what is being done
-... Web application —> UX --> Allow (some) interaction with what they can see what we’ve done
-
+<ol>
+<li>Construct NLP system to gather information from unstructured text</li>li>
+<li>Extract knowledge from retrieved information; abstract relational data</li>
+<li>Relational database</li>
+<ol> 
+<li>Allows us to publish data</li>
+<li>Provides opportunity for usage of data</li>
+</ol>
+<li>4. Produce and perform functions on data</li>
+<ul>
+<li>Visualization —> GUI --> Allow people to see what is being done </li>
+<li>Web application —> UX --> Allow (some) interaction with what they can see what we’ve done</li>
+</ul>
+</ol>
 
 ####4. Discussion
 * Tie together everything we’ve done
