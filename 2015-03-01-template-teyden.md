@@ -17,8 +17,10 @@ ___
 <ul>
 <li>large number of interactions</li>
 		<li>dynamic processes</li>
-			<li> > variant between individuals</li>
-			<li> > variant throughout individual's lifetime</li>
+			<ul>
+			<br> > variant between individuals
+			<br> > variant throughout individual's lifetime
+			</ul>
 </ul></ul>
 
 However, rapid growth in research data — need to resolve limitations in human ability to read, curate, and make meaningful connections out of large data sets. 
@@ -38,15 +40,21 @@ Thus, similarly to the wet-lab, if we assign the mundane curation processes to a
 
 ####2. Background
 <ul>
-<li>Build text mining system tailored towards biological text mining</li></ul>
->> All steps to-date (not listing it here)  
->> Portion haven’t discussed yet but I think is critical to a  complete system:
->> ... Implement Named Entity Recognition and Classification (NERC) techniques and integrate with information retrieval system (i.e. rule-based approach requires that all biological entities can be quantitatively measured...)
->> ... Use domain knowledge from biomedical ontologies with machine learning approaches using HMM, or other models appropriate for recognizing biological objects (protein, cell-type, cell-line, etc.)
+<li>Build text mining system tailored towards biological text mining</li>
+<ul>
+<li> >> All steps to-date (not listing it here)  </li>
+<li> >> Portion haven’t discussed yet but I think is critical to a  complete system:</li>
+<ul>
+<li> >> Implement Named Entity Recognition and Classification (NERC) techniques and integrate with information retrieval system (i.e. rule-based approach requires that all biological entities can be quantitatively measured...)</li>
+<li> >> Use domain knowledge from biomedical ontologies with machine learning approaches using HMM, or other models appropriate for recognizing biological objects (protein, cell-type, cell-line, etc.)</li>
+</ul>
+</ul>
+</ul>
+
 
 *In terms of our motive…*
-At CREA, they are approaching modelling the concept of aging from a systems biology standpoint, looking at interactions between biological components in the body to give rise to function and behaviour of that system.
-
+<br>At CREA, they are approaching modelling the concept of aging from a systems biology standpoint, looking at interactions between biological components in the body to give rise to function and behaviour of that system.
+<br>
 Hence, as **BIOLOGICAL AGING is a subject of growth**, which is a **function of time (i.e. X(t) …)**, as well as a **function of several additional parameters**… 
 <ul>
 <li>Set additional parameters to our growth function to be measures of quantifiable biological objects, e.g. cell volume, membrane thickness, telomere length, amount of oxygen radicals, amount of accumulation of somatic mutations, concentration of p450, etc.</li>
@@ -78,9 +86,9 @@ QUERY SEARCH: Use parameters, biological objects, and combinations of biological
 <li>Produce and perform functions on data</li>
 <ul>
 <li>Visualization --> GUI</li>
-<li> > Allow people to see what is being done</li>
+<ul><li> > Allow people to see what is being done</li></ul>
 <li>Web application --> UX</li>
-<li> > Allow (some) interaction with what they can see what we’ve done</li>
+<ul><li> > Allow (some) interaction with what they can see what we’ve done</li></ul>
 </ul>
 </ol>
 
