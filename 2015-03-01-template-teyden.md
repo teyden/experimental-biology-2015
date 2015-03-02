@@ -19,17 +19,17 @@ ___
 <li>dynamic processes</li>
 	>> variant between individuals
 	<br>>> variant throughout individual's lifetime
-</ul></ul>
-
-However, rapid growth in research data — need to resolve limitations in human ability to read, curate, and make meaningful connections out of large data sets. 
-
-In the wet-lab, automation of mundane laboratory tasks have recently allowed scientists to spend more time doing actual analysis on scientific concepts. 
-
-Hence, **PROPOSED SOLUTION**:  
-<ul>
-<li>Automate curation process through AI system to extract knowledge from scientific text and discover patterns</li>
-<li>Assist with hypothesis generation in the life sciences by applying functions to mine data, e.g., producing visualizations to highlight anomalies in research data that may not be seen by the human eye / reader</li>
 </ul>
+</ul>
+
+However, with rapid growth in increasing research data, there's a need to resolve limitations in the  human ability to read, curate, and make meaningful connections out of large data sets. 
+
+In the wet-lab, machine automation of mundane laboratory tasks have recently allowed scientists to spend more time doing actual analysis on scientific concepts. 
+
+**PROPOSED SOLUTION**:  
+>> * Automate curation process through AI system to extract knowledge from scientific text and discover patterns
+>> * Assist with hypothesis generation in the life sciences by applying functions to mine data, e.g., producing visualizations to highlight anomalies in research data that may not be seen by the human eye / reader
+
 
 Thus, similarly to the wet-lab, if we assign the mundane curation processes to a specially designed AI system tailored to extract knowledge on biological aging, (hopefully) scientists can spend more time doing analysis on the scientific concepts rather than reading 20+ articles of repeat studies to ensure confidence of results. 
 
