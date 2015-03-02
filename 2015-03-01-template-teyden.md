@@ -16,10 +16,9 @@ ___
 <li>Complex subject — hard to investigate experimentally</li>
 <ul>
 <li>large number of interactions</li>
-		<li>dynamic processes</li><ul>
-			<br> > variant between individuals
-			<br> > variant throughout individual's lifetime
-			</ul>
+<li>dynamic processes</li>
+	>> variant between individuals
+	>> variant throughout individual's lifetime
 </ul></ul>
 
 However, rapid growth in research data — need to resolve limitations in human ability to read, curate, and make meaningful connections out of large data sets. 
@@ -84,10 +83,9 @@ QUERY SEARCH: Use parameters, biological objects, and combinations of biological
 >> 4. Produce and perform functions on data
 
 <ul><li>Visualization --> GUI</li>
->> hello
-<ul><li> > Allow people to see what is being done</li></ul>
+>> Allow people to see what is being done
 <li>Web application --> UX</li>
-<ul><li> > Allow interaction with what's seen</li></ul></ul>
+>> Allow interaction with what they see</ul>
 
 
 ####4. Discussion
