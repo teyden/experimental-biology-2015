@@ -14,11 +14,11 @@ ___
 **MOTIVE**:  No clear view of aging processes. Why?
 <ul>
 <li>Complex subject — hard to investigate experimentally</li>
-<pre><li>large number of interactions</li></pre>
-<pre><li>dynamic processes</li></pre>
-<pre> > variant between individuals </pre>
-<pre> > variant throughout individual's lifetime </pre>
-</ul>
+<ul><li>large number of interactions</li>
+		<li>dynamic processes</li>
+			> variant between individuals
+			> variant throughout individual's lifetime
+</ul></ul>
 
 However, rapid growth in research data — need to resolve limitations in human ability to read, curate, and make meaningful connections out of large data sets. 
 
@@ -73,10 +73,12 @@ QUERY SEARCH: Use parameters, biological objects, and combinations of biological
 <li>Provides opportunity for usage of data</li>
 </ol>
 <li>Produce and perform functions on data</li>
-Visualization --> GUI
-> Allow people to see what is being done 
-Web application --> UX
-> Allow (some) interaction with what they can see what we’ve done
+<ul>
+<li>Visualization --> GUI</li>
+<li> > Allow people to see what is being done</li>
+<li>Web application --> UX</li>
+<li> > Allow (some) interaction with what they can see what we’ve done</li>
+</ul>
 </ol>
 
 ####4. Discussion
