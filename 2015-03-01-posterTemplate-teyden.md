@@ -9,9 +9,9 @@ ___
 ```
 
 
-####1. Introduction 
+###1. Introduction 
 
-**MOTIVE**:  No clear view of aging processes. Why?
+######**MOTIVE**:  No clear view of aging processes. Why?
 <ul>
 <li>Complex subject — hard to investigate experimentally</li>
 <ul>
@@ -26,7 +26,7 @@ However, with rapid growth in increasing research data, there's a need to resolv
 
 ***In the wet-lab, machine automation of mundane laboratory tasks have allowed scientists to spend more time doing actual analysis on scientific concepts, a better use of their time.***
 
-**PROPOSED SOLUTION**:  
+######**PROPOSED SOLUTION**:  
 >> * Automate curation process through AI system to extract knowledge from scientific text and discover patterns
 >> * Assist with hypothesis generation in the life sciences by applying functions to mined data, e.g., producing visualizations to highlight anomalies in research data that may not be seen by the human eye / reader
 
@@ -37,7 +37,7 @@ Thus, similarly to the wet-lab, if we assign the mundane curation processes to a
 >> *HYPOTHESIS*: INCREASE RATE OF PATTERN DISCOVERY IN DYNAMIC PROCESSES THROUGH FIELD-SPECIFIC NLP SCHEMA FOR TEXT MINING ?
 
 
-####2. Background
+###2. Background
 
 >> * Build text mining system tailored towards biological text mining
 
@@ -70,7 +70,7 @@ Hence, as **BIOLOGICAL AGING is a subject of growth**, which is a **function of 
 </ol>
 
 
-####3. Materials & Methods
+###3. Materials & Methods
 
 >> 1. Construct NLP system to gather information from unstructured text
 >> 2. Extract knowledge from retrieved information; abstract relational data
@@ -88,14 +88,14 @@ Hence, as **BIOLOGICAL AGING is a subject of growth**, which is a **function of 
 >> Allow interaction with what they see</ul>
 
 
-####4. Discussion
+###4. Discussion
 * Tie together everything we’ve done
 * Is it consistent with our motive? 
 * Does it benefit the research & open-source community? 
 * ...?
 
 
-####5.Conclusion
+###5. Conclusion
 * Were our goals met? 
 * What could we improve with? 
 * What are we planning for next?
