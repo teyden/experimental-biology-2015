@@ -24,7 +24,7 @@ ___
 
 However, with rapid growth in increasing research data, there's a need to resolve limitations in the  human ability to read, curate, and make meaningful connections out of large data sets. 
 
-***In the wet-lab, machine automation of mundane laboratory tasks have recently allowed scientists to spend more time doing actual analysis on scientific concepts.***
+***In the wet-lab, machine automation of mundane laboratory tasks have allowed scientists to spend more time doing actual analysis on scientific concepts, a better use of their time.***
 
 **PROPOSED SOLUTION**:  
 >> * Automate curation process through AI system to extract knowledge from scientific text and discover patterns
@@ -54,7 +54,7 @@ Thus, similarly to the wet-lab, if we assign the mundane curation processes to a
 
 
 *In terms of our motive…*
-At CREA, they are approaching modelling the concept of aging from a systems biology standpoint, looking at interactions between biological components in the body to give rise to function and behaviour of that system.
+CREA is attempting to model the concept of aging from a systems biology standpoint, looking at interactions between biological components in the body to give rise to function and behaviour of that system.
 
 Hence, as **BIOLOGICAL AGING is a subject of growth**, which is a **function of time (i.e. X(t) …)**, as well as a **function of several additional parameters**… 
 <ul>
