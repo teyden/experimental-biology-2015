@@ -92,12 +92,11 @@ Hence, as **BIOLOGICAL AGING is a subject of growth**, which is a **function of 
 * Tie together everything we’ve done
 * Is it consistent with our motive? 
 * Does it benefit the research & open-source community? 
-* ...?
+* *...?*
 
 
 ###5. Conclusion
 * Were our goals met? 
 * What could we improve with? 
 * What are we planning for next?
-* ...?
-
+* *...?*
