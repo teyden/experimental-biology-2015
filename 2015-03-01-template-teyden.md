@@ -12,7 +12,7 @@ ___
 ####1. Introduction 
 
 **MOTIVE**:  No clear view of aging processes. Why?
-⋅⋅* Complex subject — hard to investigate experimentally 
+* Complex subject — hard to investigate experimentally 
 ⋅⋅* ⋅⋅* large number of interactions
 ⋅⋅* ⋅⋅* dynamic processes
 ⋅⋅* ⋅⋅* ⋅⋅* variant between individuals
@@ -45,7 +45,7 @@ Hence, as **BIOLOGICAL AGING is a subject of growth**, which is a **function of 
 
 QUERY SEARCH: Use parameters, biological objects, and combinations of biological objects paired with common verbs describing biological events as search queries for PubMed; extract all relations from abstracts containing search query. Sample sets of query searches:
 
-⋅⋅1. parameters = [“cell volume”, “membrane thickness”, “telomere length”, “concentration of X”, “density of Y"]
+... parameters = [“cell volume”, “membrane thickness”, “telomere length”, “concentration of X”, “density of Y"]
 ⋅⋅2. biol_objects = [“p450”, “astrocyte”, “dopamine”, “hypothalamus”, “glucose”, “insulin”, “somatostatin”]
 ⋅⋅3. objectsNverbs = [[“p450”, “increase”], [“p450”, “decrease”], [“dopamine”, “activate”], [“insulin”, “inhibit”], [“somatostatin”, “excite”]]
 
@@ -59,11 +59,11 @@ QUERY SEARCH: Use parameters, biological objects, and combinations of biological
 1. Construct NLP system to gather information from unstructured text
 2. Extract knowledge from retrieved information; abstract relational data
 3. Relational database
-⋅⋅1. Allows us to publish data
-⋅⋅2. Provides opportunity for usage of data 
+..1. Allows us to publish data
+..2. Provides opportunity for usage of data 
 4. Produce and perform functions on data
-⋅⋅⋅ * Visualization —> GUI --> Allow people to see what is being done
-⋅⋅⋅ * Web application —> UX --> Allow (some) interaction with what they can see what we’ve done
+... Visualization —> GUI --> Allow people to see what is being done
+... Web application —> UX --> Allow (some) interaction with what they can see what we’ve done
 
 
 ####4. Discussion
