@@ -49,35 +49,33 @@ QUERY SEARCH: Use parameters, biological objects, and combinations of biological
 ⋅⋅2. biol_objects = [“p450”, “astrocyte”, “dopamine”, “hypothalamus”, “glucose”, “insulin”, “somatostatin”]
 ⋅⋅3. objectsNverbs = [[“p450”, “increase”], [“p450”, “decrease”], [“dopamine”, “activate”], [“insulin”, “inhibit”], [“somatostatin”, “excite”]]
 
->> ⋅⋅* Input relations to relational database 
->> ⋅⋅* Apply graphing functions to map linkage between relational text (visualization)
->> ⋅⋅* Observe relationships between data points
->> ⋅⋅* Apply more clustering & analysis functions to further manipulate data
+>> * Input relations to relational database 
+>> * Apply graphing functions to map linkage between relational text (visualization)
+>> * Observe relationships between data points
+>> * Apply more clustering & analysis functions to further manipulate data
 
 
-####3.Materials & Methods
+####3. Materials & Methods
 1. Construct NLP system to gather information from unstructured text
 2. Extract knowledge from retrieved information; abstract relational data
 3. Relational database
 ⋅⋅1. Allows us to publish data
 ⋅⋅2. Provides opportunity for usage of data 
 4. Produce and perform functions on data
-⋅⋅* Visualization —> GUI
->> Allow people to see what is being done
-⋅⋅* Web application —> UX
->> Allow (some) interaction with what they can see what we’ve done
+⋅⋅⋅ * Visualization —> GUI --> Allow people to see what is being done
+⋅⋅⋅ * Web application —> UX --> Allow (some) interaction with what they can see what we’ve done
 
 
-####4.Discussion
-⋅⋅* Tie together everything we’ve done
-⋅⋅* Is it consistent with our motive? 
-⋅⋅* Does it benefit the research & open-source community? 
-⋅⋅* ...?
+####4. Discussion
+* Tie together everything we’ve done
+* Is it consistent with our motive? 
+* Does it benefit the research & open-source community? 
+* ...?
 
 
 ####5.Conclusion
-⋅⋅* Were our goals met? 
-⋅⋅* What could we improve with? 
-⋅⋅* What are we planning for next?
-⋅⋅* ...?
+* Were our goals met? 
+* What could we improve with? 
+* What are we planning for next?
+* ...?
 
