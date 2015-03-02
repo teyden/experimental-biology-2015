@@ -14,10 +14,11 @@ ___
 **MOTIVE**:  No clear view of aging processes. Why?
 <ul>
 <li>Complex subject — hard to investigate experimentally</li>
-<ul><li>large number of interactions</li>
+<ul>
+<li>large number of interactions</li>
 		<li>dynamic processes</li>
-			> variant between individuals
-			> variant throughout individual's lifetime
+			<li> > variant between individuals</li>
+			<li> > variant throughout individual's lifetime</li>
 </ul></ul>
 
 However, rapid growth in research data — need to resolve limitations in human ability to read, curate, and make meaningful connections out of large data sets. 
@@ -27,7 +28,8 @@ In the wet-lab, automation of mundane laboratory tasks have recently allowed sci
 Hence, **PROPOSED SOLUTION**:  
 <ul>
 <li>Automate curation process through AI system to extract knowledge from scientific text and discover patterns</li>
-<li>Assist with hypothesis generation in the life sciences by applying functions to mine data, e.g., producing visualizations to highlight anomalies in research data that may not be seen by the human eye / reader</li></ul>
+<li>Assist with hypothesis generation in the life sciences by applying functions to mine data, e.g., producing visualizations to highlight anomalies in research data that may not be seen by the human eye / reader</li>
+</ul>
 
 Thus, similarly to the wet-lab, if we assign the mundane curation processes to a specially designed AI system tailored to extract knowledge on biological aging, (hopefully) scientists can spend more time doing analysis on the scientific concepts rather than reading 20+ articles of repeat studies to ensure confidence of results. 
 
@@ -36,9 +38,9 @@ Thus, similarly to the wet-lab, if we assign the mundane curation processes to a
 
 ####2. Background
 <ul>
-<li>Build text mining system tailored towards biological text mining</li> 
->> * All steps to-date (not listing it here)  
->> * Portion haven’t discussed yet but I think is critical to a  complete system:
+<li>Build text mining system tailored towards biological text mining</li></ul>
+>> All steps to-date (not listing it here)  
+>> Portion haven’t discussed yet but I think is critical to a  complete system:
 >> ... Implement Named Entity Recognition and Classification (NERC) techniques and integrate with information retrieval system (i.e. rule-based approach requires that all biological entities can be quantitatively measured...)
 >> ... Use domain knowledge from biomedical ontologies with machine learning approaches using HMM, or other models appropriate for recognizing biological objects (protein, cell-type, cell-line, etc.)
 
@@ -47,7 +49,8 @@ At CREA, they are approaching modelling the concept of aging from a systems biol
 
 Hence, as **BIOLOGICAL AGING is a subject of growth**, which is a **function of time (i.e. X(t) …)**, as well as a **function of several additional parameters**… 
 <ul>
-<li>Set additional parameters to our growth function to be measures of quantifiable biological objects, e.g. cell volume, membrane thickness, telomere length, amount of oxygen radicals, amount of accumulation of somatic mutations, concentration of p450, etc.</li></ul>
+<li>Set additional parameters to our growth function to be measures of quantifiable biological objects, e.g. cell volume, membrane thickness, telomere length, amount of oxygen radicals, amount of accumulation of somatic mutations, concentration of p450, etc.</li>
+</ul>
 
 QUERY SEARCH: Use parameters, biological objects, and combinations of biological objects paired with common verbs describing biological events as search queries for PubMed; extract all relations from abstracts containing search query. Sample sets of query searches:
 
