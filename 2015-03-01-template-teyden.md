@@ -71,16 +71,18 @@ QUERY SEARCH: Use parameters, biological objects, and combinations of biological
 
 
 ####3. Materials & Methods
-<ol>
 
 >> 1. Construct NLP system to gather information from unstructured text
 >> 2. Extract knowledge from retrieved information; abstract relational data
 >> 3. Relational database
+
 <ol> 
 <li>Allows us to publish data</li>
 <li>Provides opportunity for usage of data</li>
 </ol>
+
 >> 4. Produce and perform functions on data
+
 <ul><li>Visualization --> GUI</li>
 <ul><li> > Allow people to see what is being done</li></ul>
 <li>Web application --> UX</li>
