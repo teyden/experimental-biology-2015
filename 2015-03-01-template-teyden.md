@@ -76,17 +76,18 @@ QUERY SEARCH: Use parameters, biological objects, and combinations of biological
 >> 2. Extract knowledge from retrieved information; abstract relational data
 >> 3. Relational database
 
-<ol> 
+<ul> 
 <li>Allows us to publish data</li>
 <li>Provides opportunity for usage of data</li>
-</ol>
+</ul>
 
 >> 4. Produce and perform functions on data
 
 <ul><li>Visualization --> GUI</li>
+>> hello
 <ul><li> > Allow people to see what is being done</li></ul>
 <li>Web application --> UX</li>
-<ul><li> > Allow (some) interaction with what they can see what we’ve done</li></ul></ul>
+<ul><li> > Allow interaction with what's seen</li></ul></ul>
 
 
 ####4. Discussion
