@@ -14,6 +14,7 @@
 
 \begin{document}
 
+<<<<<<< HEAD
 \subsection*{NOTES}
 \begin{itemize}
 \item Each section must be 9-12 sentences
@@ -26,6 +27,21 @@
   \vspace{3mm}
          {\bf Using natural language parsing and artificial intelligence techniques to initiate a phase change to biological knowledge}\\
 \end{flushleft}
+=======
+\section{Notes:}
+\begin{itemize}
+\item Each section must be 9-12 sentences
+\item Text orientation must be planned when writing is complete
+\item Add images or graphs as examples
+\item If you wish to write a particular section, make a comment indicating which point + section below
+\item Cite where you get external information from (critical)
+\end{itemize}
+
+\begin{center}
+  \vspace{3mm}
+         {\bf Using natural language parsing and artificial intelligence techniques to initiate a phase change to biological knowledge}\\
+\end{center}
+>>>>>>> 2e34684417482fbe1688bdc0eadd869d7be3a62a
 
 \section{Abstract}
 
@@ -40,10 +56,17 @@ The Biological Navigation and Visualization Tool (BioNaVisT) is an artificial in
 		\item \textbf{Difficulty in Quantifying Aging:} Complex subject, hard to investigate experimentally. Too many systems involved, dynamic biological interactions, too much variation between individuals, too much variation over time.
 		\item \textbf{"Big Data":} Large number of abstracts on Pubmed. New articles on aging published daily. Data stored in inaccessible formats, as semantically unstructured text or images. 
 	\end{itemize}
+<<<<<<< HEAD
 \item Goal: 
 	\begin{itemize}
 		\item \textbf{Efficiency:} Automate text curation process and extract relations from Pubmed article abstract 
 		\item \textbf{Reliability:} Improve relation extraction with machine learning on biological aging-related rules 
+=======
+\item Proposed Solution: 
+	\begin{itemize}
+		\item \textbf{Efficiency:} Automate text curation process
+		\item \textbf{Reliability:} Extract knowlege on aging processes and improve results with machine learning
+>>>>>>> 2e34684417482fbe1688bdc0eadd869d7be3a62a
 		\item \textbf{Functionality:} Provide passage for concept modelling and hypothesis generation
 	\end{itemize}
 \end{itemize}
@@ -53,11 +76,16 @@ The Biological Navigation and Visualization Tool (BioNaVisT) is an artificial in
 \begin{itemize}
 \item \textbf{Quantifying Aging Processes:} Quantify interactions in human body (growth in biological aging, is a function of time). Interested in biological events to build our model. CREA is modelling aging from a systems biology standpoint. Begin by looking at interactions between biological objects, how they give rise to a model for function and behaviour of a particular system, and how the sum of their parts give rise to function and behavior of all systems as a whole.  
 \item \textbf{Algorithmic Approach:} NLP to extract unstructured text from PubMed article abstracts. Store relations in structured digital format. Map data using graphs to visualize connections between unlinked data.
+<<<<<<< HEAD
 \item \textbf{Expected Advantages:} Improve pattern discovery. Provide knowledge base accessibility, permit data manipulation (i.e applying functions that predict biological change in a process)
+=======
+\item \textbf{Expected Advantages:} Improve pattern discovery. Provide knowledge base accessibility, permit data manipulation such as applying functions that predict biological change in a process. 
+>>>>>>> 2e34684417482fbe1688bdc0eadd869d7be3a62a
 \end{itemize}
 
 \section{Methods}
 
+<<<<<<< HEAD
 \subsubsection*{A:  Knowledge Extraction and NLP}
 \begin{itemize}
 \item Use a NLP engine to process and extract relations of PubMed article abstracts
@@ -122,11 +150,54 @@ The Biological Navigation and Visualization Tool (BioNaVisT) is an artificial in
 
 \begin{itemize}
 \item To be discussed Saturday
+=======
+\begin{itemize}
+\item \textbf{Knowledge Extraction and NLP}
+	\begin{itemize}
+	\item Use a NLP engine to process and extract relations of PubMed article abstracts
+	\item Relations are a 3-tuple of (subject, predicate, object)
+	\item Filter these relations
+	\item Plot them on a graph
+	\item Analyse the graph to find patterns, or possible optimizations to the algorithm
+	\item Repeat
+	\end{itemize}
+\item \textbf{Current: Bootstrapping / Semi-Supervised Learning}
+	\begin{itemize}
+	\item Iterate: Use patterns to get more instances and patterns 
+	\item (Example 1)	
+	\item 		Target relation: chemical interaction
+	\item 		Seed tuple: [named_entity=dopamine, named_entity=progesterone] ...
+	\item (Example 2)	
+	\item 		Target relation: excitation event
+	\item 		Seed tuple: [named_entity=dopamine, verb=excite]	
+\item \textbf{Entity Classification}
+	\begin{itemize}
+	\item Biological Events [not complete, made this up on the spot]
+		\begin{itemize}
+		\item Pathways (i.e. Wnt signaling)
+		\item Biomolecular Interaction (i.e. glucose increase insulin release)
+		\item Biological Phenomena (i.e. Apoptosis - cell death)
+		\item Environmental Events (i.e. Acetaminophen digestion)
+		\item Others* (i.e. Binding in cytosol)
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\section{Results}
+
+\begin{itemize}
+	\item To be discussed Saturday
+>>>>>>> 2e34684417482fbe1688bdc0eadd869d7be3a62a
 \end{itemize}
 
 \section{Discussion}
 
+<<<<<<< HEAD
 \subsubsection*{NLP: Effectiveness of using computer science data structures (particularly graph structures) to store knowledge}
+=======
+\textbf{NLP:} Effectiveness of using computer science data structures (particularly graph structures) to store knowledge
+
+>>>>>>> 2e34684417482fbe1688bdc0eadd869d7be3a62a
 \begin{itemize}
 \item Explore connections of known relations to find new ones mentioned in new papers
 \item Find papers that back up a relation link
@@ -134,12 +205,21 @@ The Biological Navigation and Visualization Tool (BioNaVisT) is an artificial in
 \item Find the importance of something, i.e. its multitude of relations to others histogram
 \end{itemize}
 
+<<<<<<< HEAD
 \subsubsection*{Web App: Supporting transparency of our research}
+=======
+\textbf{Web App:} Supporting transparency of our research
+
+>>>>>>> 2e34684417482fbe1688bdc0eadd869d7be3a62a
 \begin{itemize}
 \item Visualizing the relations to easily identify connections graph
 \item A tool to find large-scale trends and relations previously overlooked
 \item An simpler interface for anyone to use interaction
+<<<<<<< HEAD
 \item A way to test and reflect the well-roundedness of this method
+=======
+\item A way to test and reflect the well-roundedness of this method\end{itemize}
+>>>>>>> 2e34684417482fbe1688bdc0eadd869d7be3a62a
 \end{itemize}
 
 \section{Conclusion}
@@ -152,7 +232,12 @@ The Biological Navigation and Visualization Tool (BioNaVisT) is an artificial in
 \section{Bibliography}
 
 
+<<<<<<< HEAD
 \section{Appendices}
 
 
 \end{document}
+=======
+
+\section{Appendices}
+>>>>>>> 2e34684417482fbe1688bdc0eadd869d7be3a62a
