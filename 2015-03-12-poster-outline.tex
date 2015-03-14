@@ -14,17 +14,18 @@
 
 \begin{document}
 
-\section{Notes:}
+\subsection*{NOTES}
 \begin{itemize}
 \item Each section must be 9-12 sentences
-\item Text orientation must be planned when writing is complete
-\item Add images or graphs as examples
+\item Text orientation on poster once complete
+\item Add images and/or graphs 
+\item \textbf{Final Version Due: Saturday, March 21st}
 \end{itemize}
 
-\begin{center}
+\begin{flushleft}
   \vspace{3mm}
          {\bf Using natural language parsing and artificial intelligence techniques to initiate a phase change to biological knowledge}\\
-\end{center}
+\end{flushleft}
 
 \section{Abstract}
 
@@ -39,10 +40,10 @@ The Biological Navigation and Visualization Tool (BioNaVisT) is an artificial in
 		\item \textbf{Difficulty in Quantifying Aging:} Complex subject, hard to investigate experimentally. Too many systems involved, dynamic biological interactions, too much variation between individuals, too much variation over time.
 		\item \textbf{"Big Data":} Large number of abstracts on Pubmed. New articles on aging published daily. Data stored in inaccessible formats, as semantically unstructured text or images. 
 	\end{itemize}
-\item Proposed Solution: 
+\item Goal: 
 	\begin{itemize}
-		\item \textbf{Efficiency:} Automate text curation process
-		\item \textbf{Reliability:} Extract knowlege on aging processes and improve results with machine learning
+		\item \textbf{Efficiency:} Automate text curation process and extract relations from Pubmed article abstract 
+		\item \textbf{Reliability:} Improve relation extraction with machine learning on biological aging-related rules 
 		\item \textbf{Functionality:} Provide passage for concept modelling and hypothesis generation
 	\end{itemize}
 \end{itemize}
@@ -52,53 +53,80 @@ The Biological Navigation and Visualization Tool (BioNaVisT) is an artificial in
 \begin{itemize}
 \item \textbf{Quantifying Aging Processes:} Quantify interactions in human body (growth in biological aging, is a function of time). Interested in biological events to build our model. CREA is modelling aging from a systems biology standpoint. Begin by looking at interactions between biological objects, how they give rise to a model for function and behaviour of a particular system, and how the sum of their parts give rise to function and behavior of all systems as a whole.  
 \item \textbf{Algorithmic Approach:} NLP to extract unstructured text from PubMed article abstracts. Store relations in structured digital format. Map data using graphs to visualize connections between unlinked data.
-\item \textbf{Expected Advantages:} Improve pattern discovery. Provide knowledge base accessibility, permit data manipulation such as applying functions that predict biological change in a process. 
+\item \textbf{Expected Advantages:} Improve pattern discovery. Provide knowledge base accessibility, permit data manipulation (i.e applying functions that predict biological change in a process)
 \end{itemize}
 
 \section{Methods}
 
+\subsubsection*{A:  Knowledge Extraction and NLP}
 \begin{itemize}
-\item \textbf{Knowledge Extraction and NLP}
+\item Use a NLP engine to process and extract relations of PubMed article abstracts
+\item Relations are a 3-tuple of (subject, predicate, object)
+\item Filter these relations
+\item Plot them on a graph
+\item Analyse the graph to find patterns, or possible optimizations to the algorithm
+\item Repeat
+\end{itemize}
+
+\subsubsection*{B:  Bootstrapping and Semi-Supervised Learning}
+\begin{itemize}
+\item Iteration: Use patterns to get more instances and patterns 
+\item Example 1: Target relation: chemical interaction
 	\begin{itemize}
-	\item Use a NLP engine to process and extract relations of PubMed article abstracts
-	\item Relations are a 3-tuple of (subject, predicate, object)
-	\item Filter these relations
-	\item Plot them on a graph
-	\item Analyse the graph to find patterns, or possible optimizations to the algorithm
-	\item Repeat
-	\end{itemize}
-\item \textbf{Current: Bootstrapping / Semi-Supervised Learning}
-	\begin{itemize}
-	\item Iterate: Use patterns to get more instances and patterns 
-	\item (Example 1)	
-	\item 		Target relation: chemical interaction
-	\item 		Seed tuple: [named_entity=dopamine, named_entity=progesterone] ...
-	\item (Example 2)	
-	\item 		Target relation: excitation event
-	\item 		Seed tuple: [named_entity=dopamine, verb=excite]	
-\item \textbf{Entity Classification}
-	\begin{itemize}
-	\item Biological Events [not complete, made this up on the spot]
+	\item 	1. Seed tuple: [named\_entity=progesterone, named\_entity=dopamine]
 		\begin{itemize}
-		\item Pathways (i.e. Wnt signaling)
-		\item Biomolecular Interaction (i.e. glucose increase insulin release)
-		\item Biological Phenomena (i.e. Apoptosis - cell death)
-		\item Environmental Events (i.e. Acetaminophen digestion)
-		\item Others* (i.e. Binding in cytosol)
+		\item 	i.e. progesterone decreases dopamine 
+		\item 	i.e. progesterone regulates dopamine
+		\end{itemize}
+	\item 	2. Seed tuple: [named\_entity=dopamine, named\_entity=prolactin]
+		\begin{itemize}
+		\item 	i.e. dopamine regulates prolactin 
+		\item 	i.e. dopamine inhibits prolactin
 		\end{itemize}
 	\end{itemize}
+\item Example 2: Target relation: excitation event
+	\begin{itemize}
+	\item 1.	Seed tuple: [named\_entity=dopamine, verb=excite]
+		\begin{itemize}
+		\item 	i.e. cannibinoid excites dopamine
+		\item	i.e. opiod excites dopamine
+		\end{itemize}
+	\end{itemize}
+\item Example 3: Target relation: inhibitory event
+	\begin{itemize}
+	\item 1.	Seed tuple: [named\_entity=dopamine, verb=inhibit]
+		\begin{itemize}
+		\item 	i.e. dopamine inhibits prolactin
+		\item	i.e. L-dopa inhibits dopamine
+		\item 	i.e. antipsychotic medication inhibits dopamine
+		\item 	i.e. dopamine inhibits activated T cells
+		\end{itemize}			
+
+	\end{itemize}
+\end{itemize}	
+
+\subsubsection*{C:  Entity Classification}
+\begin{itemize}
+\item Biological Events 
+	\begin{itemize}
+	\item Pathways (i.e. Wnt signaling)
+	\item Biomolecular Interaction (i.e. glucose increase insulin release)
+	\item Biological Phenomena (i.e. Apoptosis - cell death)
+	\item Environmental Events (i.e. Acetaminophen digestion)
+	\item Others (i.e. Binding in cytosol)
+	\end{itemize}
 \end{itemize}
+
 
 \section{Results}
 
 \begin{itemize}
-	\item To be discussed Saturday
+\item To be discussed Saturday
 \end{itemize}
 
 \section{Discussion}
 
-\textbf{NLP:} Effectiveness of using computer science data structures (particularly graph structures) to store knowledge
-
+\subsubsection*{NLP: Effectiveness of using computer science data structures (particularly graph structures) to store knowledge}
 \begin{itemize}
 \item Explore connections of known relations to find new ones mentioned in new papers
 \item Find papers that back up a relation link
@@ -106,13 +134,12 @@ The Biological Navigation and Visualization Tool (BioNaVisT) is an artificial in
 \item Find the importance of something, i.e. its multitude of relations to others histogram
 \end{itemize}
 
-\textbf{Web App:} Supporting transparency of our research
-
+\subsubsection*{Web App: Supporting transparency of our research}
 \begin{itemize}
 \item Visualizing the relations to easily identify connections graph
 \item A tool to find large-scale trends and relations previously overlooked
 \item An simpler interface for anyone to use interaction
-\item A way to test and reflect the well-roundedness of this method\end{itemize}
+\item A way to test and reflect the well-roundedness of this method
 \end{itemize}
 
 \section{Conclusion}
@@ -124,8 +151,8 @@ The Biological Navigation and Visualization Tool (BioNaVisT) is an artificial in
 
 \section{Bibliography}
 
-Great for producing examples of our method:
-http://courses.cs.washington.edu/courses/cse517/13wi/slides/cse517wi13-RelationExtraction.pdf
-
 
 \section{Appendices}
+
+
+\end{document}
