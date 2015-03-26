@@ -1,0 +1,116 @@
+<Introduction>
+Our goal is to programmatically build a model of neuroendocrine aging, finding sentences in article abstracts where the subjects and objects of the sentences are nouns in our vocabulary - and the predicates of the sentence, relating the subjects and the objects, are verbs in our vocabulary. We’ve developed software to retrieve article abstracts from PubMed, filter out sentences that do not contain verbs in our chosen vocabulary, parse sentences to examine their phrase structure and lastly extract relations (i.e. subject-predicate-object triples) by pattern matching on the phrase structure of parsed sentences. In addition to the software that allows us to extract relations from article abstracts to form our model of neuroendocrine aging, we publish an interactive graph visualization of our model, accessible from your web browser. 
+
+Prior to starting this project, we had been building a model of neuroendocrine aging by hand: we read article abstracts ourselves, finding relations between two nouns in sentences and then adding them to our model. This method of building a model of neuroendocrine aging appears ineffective to us, as articles about neuroendocrine aging are published at an ever-increasing rate.
+
+Previous work in the relation extraction and semantic web communities, such as Carnegie Mellon’s Read the Web [3] project and the University of Mannheim’s DBpedia [9] project, inspired us to find a method for constructing our model of neuroendocrine aging programmatically. Neither project provided us with precisely the software tools we needed to retrieve article abstracts and extract relations from them, so we felt it was necessary to develop our own. We indeed believe that our relation extraction software has enabled us to construct a model of neuroendocrine aging programmatically and has hence helped us study neuroendocrine aging more effectively, though there is still much room for improvement with regards to the accuracy and performance of our software.
+</Introduction>
+
+
+<Methods>
+We search for articles on PubMed with queries containing nouns from our neuroendocrine aging vocabulary. The National Center for Biotechnology Information (NCBI) provides with the Entrez Programming Utilities [5], allowing us to search for articles on PubMed in our software, obtaining a list of article unique identifiers as a response. We chose to uniformly sample articles about each noun in our vocabulary, after searching for each noun in our vocabulary & obtaining a list of article unique identifiers for each noun. Then, we download article abstracts, after sampling from the list of article unique identifiers that we have obtained; the Entrez Programming Utilities lets us fetch article abstracts as well. After downloading article abstracts, we tokenize them into sentences, using a small software module provided by David Hall [8]. We then filter out sentences that do not contain a word stem of one of the verbs in our vocabulary; we do not want to extract relations from sentences that we do not need to, since it takes considerable time to extract relations from sentences. Lastly, we extract relations from the remaining sentences that contain verbs from our vocabulary and, finally, we write them to a sink - our relational database.
+
+Figure 2.0: Process Diagram
+Figure 2.1: Penn Treebank Tags
+Figure 2.2 (A — F): Example of Relation Extraction 
+Figure 2.3: Biological Knowledge Network
+Figure 2.4: Example Relation Types
+Figure 2.5: Web Application Screenshot I
+Figure 2.6: Web Application Screenshot II
+
+<Table>
+Table A: Example Noun Types
+Sample of noun subjects and noun objects queried in our initial dataset. Relations extracted either contained a query noun as a subject or object, or came from PubMed article abstracts that contained at least a single instance of the query noun in the body of the text.
+</Table>
+
+</Methods>
+
+
+<Results>
+We extracted relations from article abstracts for about four weeks, in our first attempt to use our software to programmatically construct a model of neuroendocrine aging; in total, we extracted 59,254 relations from nearly
+12,000 articles, with a failure rate of roughly 53%. Then, we took the relations we extracted from article abstracts - our model - and exported them to a GEXF graph file [7]. This allowed us to view & analyze our model using the Gephi graph visualization software [1], and also present it in our interactive graph visualization viewable in your web browser. We use the Chinese Whispers clustering algorithm [2] to group nouns (that is, nodes on our graph) using its graph properties like the weight and degree of its edges. After clustering, it appears as though words of the similar meaning or have strong relations with each other are closer together, much like how we categorize nouns by colour on the model of neuroendocrine aging that we originally built by hand. Though, we need to make further comparisons between our programmatically-constructed models of neuroendocrine aging and our hand-constructed model of neuroendocrine endocrine, in order to determine precisely how well a clustering algorithm like Chinese Whispers correctly clusters words with similar meaning together.
+
+There are a total of 27,004,753 articles published about the 178 nouns chosen for our aging vocabulary between January 1st, 1970 and February 20th, 2015 - we computed this value. By building our software with the technology known as scalaz-stream [4], we were able to fetch and extract relations from multiple articles in parallel. In our case, we were able to take advantage of the 64 cores and 192 GB RAM offered by our host machine, named high-fructose-corn-syrup [10]. However, we still were only able to extract relations from a small percentage of these article abstracts in the four week period that we ran our software for - with a high rate of failure when extracting relations from sentences because we did not have patterns defined for sentences of particular phrase-structures.
+
+After querying nouns from our vocabulary to obtain relations from PubMed abstracts, we filtered with tuples of noun types that make up our three relation classes using items from our vocabulary of nouns. We then were able to abstract verb instances from these relations that are commonly used, keeping track of the ones that are used more in a particular relation class. 
+
+In the last step of analyzing our relation classification method, we took verbs and nouns (Figure 2.4, Table A & B) from each relation type and queried them (Table B) as a seed tuple to obtain a wildcard object-noun or subject-noun to test the confidence of our relation definitions against the entire set of relations extracted (Table C). The purpose was to evaluate the validity of our definitions of what a significant relation would be, for our model of neuroendocrine aging. 
+
+<Table>
+Table B: Example Seed Tuples for Filtering
+For each relation class, a noun tuple filters for verbs and a noun+verb tuple filters for a wildcard subject-noun or object-noun.
+</Table>
+
+<Table>
+Table C: Relation Noun-Filtered Verbs
+Verbs showing the highest observed frequency out of 59,254 relations, having excluded those that occurred less than 10% relative to the highest frequency verb (“increase”). We sampled the composition of the verb used to describe each relation class and from there, eluded a semantic profile of each verb relative to our relation definitions. The above list of verbs (Table B - 14,094 relations total) were obtained by filtering with seed tuples as displayed in Table A.  Using separate sets of nouns to query for verbs by category, the distribution of verb frequency for substrate nouns showed a linear relationship with the distribution of verb frequency for the entire set of all relations. 
+</Table>
+
+</Results>
+
+
+
+<Discussion>
+In the future, we would like to go beyond low level biochemical interactions and build on our system to handle higher level relations in biology. We would eventually like to perform data modelling at this level, using specialized sets of real-life parameters to extend knowledge discovery in our visualization to allow data clustering in a way that may reveal insights to high level processes in biological systems (i.e. cancer types, mental disease, intersections of disease conditions). 
+
+An added feature we wish to enhance that could help achieve this is a relation highlighting feature that allows a user to specify the degree of connection from an initial input (i.e. degree of 1 will highlight first degree connections to each initial object selected). This may help users gain understanding of targeted information on a particular object, process, or perhaps discover new patterns in the visualization.
+
+In the beginning of the project, we used Gephi, an interactive visualization platform for graphs, to present our data. As we further developed our ideas, we realized that we could not solely rely on Gephi to show all the properties of the node and edges for our graph. Thus, we decided to build a more customizable visualization tool in the form of a web application in order to accommodate our needs. As a product of the web application, we were able to add features that didn’t previously exist in the Gephi interface. Firstly, for each node of the graph, we added a descriptive side panel combining a short description obtained using the DBpedia API [9], a frequency histogram summarizing object verb occurrence, and hyperlinks to the original source of where the relations came from. Secondly, for each edge of the graph we’ve displayed comparative data on the two node types, summary data on verbs relating the two particular nodes in order of frequency, and again, hyperlinks to the original source. 
+
+The next stage in our research will comprise of more in-depth approaches in inference-based models for classifying trends in relations. As one of our top priorities, we intend to implement clustering machine learning methods (i.e. unsupervised learning) [12] for grouping common words and phrases in text mining and defining patterns in real-time as text streaming is occurring live. Such groups will allow determination of thematic elements, ontology extraction and text summarization.
+</Discussion>
+
+
+<Conclusion>
+We intend to run our software for another four weeks, gathering more precise statistics about its performance and accuracy; we also wish to increase our computing power, perhaps by allowing us to extract relations on multiple machines at once, using technology such as Apache Spark & Amazon Web Services.
+</Conclusion>
+
+
+<References>
+[1] Mathieu Bastian, Sebastien Heymann, and Mathieu Jacomy. Gephi:
+An open source software for exploring and manipulating networks. In
+Eytan Adar, Matthew Hurst, Tim Finin, Natalie S. Glance, Nicolas
+Nicolov, and Belle L. Tseng, editors, ICWSM. The AAAI Press, 2009.
+
+[2] Chris Biemann. Chinese Whispers: An efficient graph clustering algorithm
+and its application to natural language processing problems. In
+Proceedings of the First Workshop on Graph Based Methods for Natural
+Language Processing, TextGraphs-1, pages 73–80, Stroudsburg, PA,
+USA, 2006. Association for Computational Linguistics.
+
+[3] Andrew Carlson, Justin Betteridge, Bryan Kisiel, Burr Settles, Estevam
+R. Hruschka, and Tom M. Mitchell. Toward an architecture for
+never-ending language learning. In In AAAI, 2010.
+
+[4] Scalaz Open Source Community. Scalaz-stream: Compositional,
+streaming I/O for Scala. https://github.com/scalaz/
+scalaz-stream, 2015.
+[5] National Center for Biotechnology Information. Entrez programming
+utilities help. http://www.ncbi.nlm.nih.gov/books/NBK25501/,
+2012.
+
+[6] Berkeley NLP Group. The Berkeley Parser. http://nlp.cs.
+berkeley.edu/software.shtml, 2009.
+
+[7] GEXF Working Group. The GEXF file format. http://gexf.net/
+format/authors.html, 2009.
+
+[8] David Hall. ScalaNLP: Scientific computing, machine learning, and
+natural language processing. http://www.scalanlp.org/, 2015.
+
+[9] Jens Lehmann, Robert Isele, Max Jakob, Anja Jentzsch, Dimitris Kontokostas,
+Pablo N. Mendes, Sebastian Hellmann, Mohamed Morsey,
+Patrick van Kleef, S¨oren Auer, and Christian Bizer. DBpedia - a largescale,
+multilingual knowledge base extracted from wikipedia. Semantic
+Web Journal, 2014.
+
+[10] The Computer Science Club of the University of Waterloo. Machine
+list. https://wiki.csclub.uwaterloo.ca/Machine_List, 2012.
+
+[11] Mihai Surdeanu. Penn treebank II constituent tags. http://nlp.cs.
+berkeley.edu/software.shtml, 2015.
+
+[12] Barlett, K. Application of Unsupervised Learning Methods to an Author Separation Task (Masters thesis). Rensselaer Polytechnic Institute, New York. http://www.cs.rpi.edu/~szymansk/theses/barlett.08.ms.pdf, 2008. 
+
+[13] Zhu, Fei, Preecha Patumcharoenpol, Cheng Zhang, Yang Yang, Jonathan Chan, Asawin Meechai, Wanwipa Vongsangnak, and Bairong Shen. Biomedical Text Mining and Its Applications in Cancer Research. Journal of Biomedical Informatics 46.2 (2013): 200-11. Science Direct, 2013.
+</References>
